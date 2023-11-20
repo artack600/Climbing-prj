@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Overpass&family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Overpass&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <link rel="stylesheet" type="text/css" href="inicio.html">
+    <link rel="stylesheet" type="text/css" href="equipo.html">
+    <link rel="stylesheet" type="text/css" href="consejos.html">
+    <link rel="stylesheet" type="text/css" href="lugares.html">
+    <link rel="stylesheet" type="text/css" href="teamclimbers.html">
+    <link rel="stylesheet" type="text/css" href="certificados.html"
+    <link rel="stylesheet" type="text/css" href="contacto.html">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+</head>
+<body>
+    <center><h1 class="titulo"> Contactactanos </h1></center>
+    <hr>
+    <div class="menu"><center><ul>
+        <li> <a href="index.html"> Inicio </a> </li>
+        <li> <a href="equipo.html"> Equipo </a> </li>
+        <li> <a href="consejos.html"> Consejos </a> </li>
+        <li> <a href="lugares.html"> lugares </a> </li>
+        <li> <a href="teamclimbers.html"> Team climbers </a> </li>
+        <li> <a href="certificados.html"> Certificados </a> </li>
+        <li> <a href="contacto.html"> Contacto </a> </li>
+    </ul></center></div>
+
+    <h1>Contacto</h1>
+    <p class="texto"><b> Por favor, completa el siguiente formulario para ponerte en contacto con nosotros: </p></b>
+    
+    <form action="procesar.php" method="post">
+        <label for="nombre" class="texto2">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <hr>
+        <label for="correo" class="texto2">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+        <hr>
+        <label for="mensaje" class="texto2">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+        
+        <input type="submit" value="Enviar" class="imput-enviar">
+    </form>
+    
+    <hr>
+
+    <p class="texto"><b> Tambien puedes encontrarnos en las redes sociales para obtener 
+        actualizaciones diarias, consejos útiles y contenido exclusivo. </p></b>
+        <div class="Cell">
+        <img src="WhatsApp.png" alt="" class="img4"> <p><b> +506 [numero] </b></p>
+        </div>
+</body>
+</html>
