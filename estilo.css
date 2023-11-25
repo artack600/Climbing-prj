@@ -245,4 +245,10 @@ margin-right: 1300px;
     border: 2px solid #7a36d4;
     color: #7a36d4 ;
 }
-
+footer {
+    margin-top: 50px;
+    text-align: center;
+    padding: 10px;
+    background-color: #555;
+    color: #fff;
+}
