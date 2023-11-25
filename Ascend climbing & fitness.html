@@ -61,11 +61,19 @@
             max-width: 400px;
             margin: 0 auto;
         }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            padding: 10px;
+            background-color: #555;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
 
     <h2>Barra de Búsqueda</h2>
+<hr>
 
     <form id="searchForm">
         <label for="nombre">Nombre:</label>
@@ -83,6 +91,10 @@
     <div id="resultado">
         <!-- Aquí se mostrará el resultado de la búsqueda -->
     </div>
+
+    <footer>
+        <p>&copy; 2023 Tu Empresa. Todos los derechos reservados.</p>
+    </footer>
 
     <script>
         function buscar() {
