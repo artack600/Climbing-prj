@@ -33,8 +33,8 @@ background: #ffffff;
 }
 
 #plantilla{
-    width: 1920px;
-    height: 250px;
+    width: 1000px;
+    height: 350px;
 }
 
 .texto{
@@ -248,7 +248,7 @@ margin-right: 1300px;
 footer {
     margin-top: 50px;
     text-align: center;
-    padding: 10px;
+    padding: 25px;
     background-color: #555;
     color: #fff;
 }
