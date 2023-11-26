@@ -234,7 +234,7 @@ margin-right: 1300px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
     border-radius: 10px;
-    margin: 150px 130px;
+    margin: 30px 15px;
     padding: 15px 30px;
     background-color: #ffa500;
     color: aliceblue;
@@ -251,4 +251,7 @@ footer {
     padding: 25px;
     background-color: #555;
     color: #fff;
+}
+.Gym-s{
+    display: inline-flex
 }

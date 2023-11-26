@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra de Búsqueda</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #FF6400;
+            color: #fffbfb;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #9700FF;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            padding: 10px;
+            background-color: #555;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Barra de Búsqueda</h2> 
+<hr>
+
+    <form id="searchForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingrese el nombre">
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" placeholder="Ingrese el apellido">
+
+        <label for="cedula">Cédula:</label>
+        <input type="text" id="cedula" name="cedula" placeholder="Ingrese la cédula">
+
+        <button type="button" onclick="buscar()">Buscar</button>
+    </form>
+
+    <div id="resultado">
+        <!-- Aquí se mostrará el resultado de la búsqueda -->
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Tu Empresa. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function buscar() {
+            // Aquí puedes agregar la lógica para procesar la búsqueda
+            var nombre = document.getElementById('nombre').value;
+            var apellido = document.getElementById('apellido').value;
+            var cedula = document.getElementById('cedula').value;
+
+            // Puedes realizar una solicitud AJAX o cualquier otro método para buscar en base a los valores ingresados
+            // En este ejemplo, simplemente mostramos los valores en el div de resultado
+            var resultado = "Búsqueda realizada: Nombre - " + nombre + ", Apellido - " + apellido + ", Cédula - " + cedula;
+            document.getElementById('resultado').innerHTML = resultado;
+        }
+    </script>
+
+</body>
+</html>
