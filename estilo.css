@@ -132,19 +132,24 @@ margin-right: 1300px;
 }
 
 #link2 {
-    width:300px;
-    border: 2px solid black;
-    font-size: x-large;
-    background-color: black;
-    color: white;
-    padding: 4px;
-    border-radius: 12px;
-    padding-left: 12px;
-    padding-right: 12px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    text-decoration: none;
-    margin-left: 1700px;
+    background-color: #000000;
+    padding: 15px;
+    background: linear-gradient(
+        90deg,
+        rgba(140, 43, 231, 1)25%
+        rgba(61, 1, 245, 1)100%
+    );
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+section {
+    padding-top: 25px; 
+    padding-bottom: 20px;
 }
 
 * {

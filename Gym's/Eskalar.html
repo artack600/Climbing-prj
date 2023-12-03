@@ -68,47 +68,41 @@
             background-color: #555;
             color: #fff;
         }
+        section {
+            padding-top: 25px; 
+            padding-bottom: 20px;
+        }
+        #link2 {
+            background-color: #000000;
+            padding: 15px;
+            background: linear-gradient(
+                90deg,
+                rgba(140, 43, 231, 1)25%
+                rgba(61, 1, 245, 1)100%
+            );
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+            color: #ffffff;
+            text-transform: uppercase;
+            font-size: 14px;
+            cursor: pointer;
+            font-weight: 600;
+        }
     </style>
 </head>
 <body>
+    <section>
+        <a href="http://localhost/registro" id="link2"> Iniciar Sesion </a>
+    </section>
 
     <h2>Barra de Búsqueda</h2> 
 <hr>
 
-    <form id="searchForm">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Ingrese el nombre">
-
-        <label for="apellido">Apellido:</label>
-        <input type="text" id="apellido" name="apellido" placeholder="Ingrese el apellido">
-
-        <label for="cedula">Cédula:</label>
-        <input type="text" id="cedula" name="cedula" placeholder="Ingrese la cédula">
-
-        <button type="button" onclick="buscar()">Buscar</button>
-    </form>
-
-    <div id="resultado">
-        <!-- Aquí se mostrará el resultado de la búsqueda -->
+<div class="container">
+    <input type="text" placeholder="Buscar">
+    <div class="btn2">
+        <i class="fa fa-search"></i>
     </div>
-
-    <footer>
-        <p>&copy; 2023 Tu Empresa. Todos los derechos reservados.</p>
-    </footer>
-
-    <script>
-        function buscar() {
-            // Aquí puedes agregar la lógica para procesar la búsqueda
-            var nombre = document.getElementById('nombre').value;
-            var apellido = document.getElementById('apellido').value;
-            var cedula = document.getElementById('cedula').value;
-
-            // Puedes realizar una solicitud AJAX o cualquier otro método para buscar en base a los valores ingresados
-            // En este ejemplo, simplemente mostramos los valores en el div de resultado
-            var resultado = "Búsqueda realizada: Nombre - " + nombre + ", Apellido - " + apellido + ", Cédula - " + cedula;
-            document.getElementById('resultado').innerHTML = resultado;
-        }
-    </script>
+</div> 
 
 </body>
 </html>
