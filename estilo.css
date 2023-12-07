@@ -317,3 +317,10 @@ footer {
     border: 2px solid #000000;
     color: #000000 ;
 }
+
+#mapa{
+    box-shadow: 20px 20px 37px #3498db;
+    width: 900px;
+    height: 700px;
+}
+

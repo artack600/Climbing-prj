@@ -38,7 +38,7 @@
     <img class="input-icon" src="images/phone.svg" alt="">
 </div>
 
-<input class="btn" type="submit" name="registrar" value="Enviar">
+<input class="btn" type="submit" name="registro" value="Enviar">
 
 </form>
 
