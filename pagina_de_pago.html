@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Pago</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <style>
+        /* Estilos CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            min-height: 100vh;
+            background-color: #f2f2f2; /* Fondo gris claro */
+        }
+        header {
+            background-color: #2E8B57; /* Verde oscuro */
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .payment-form {
+            background-color: #fff; /* Fondo blanco */
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .payment-form h2 {
+            margin-top: 0;
+            color: #2E8B57; /* Verde oscuro */
+        }
+        .payment-form label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666; /* Gris oscuro */
+        }
+        .payment-form input[type="text"],
+        .payment-form input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .payment-form button {
+            background-color: #2E8B57; /* Verde oscuro */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .payment-form button:hover {
+            background-color: #3CB371; /* Verde más claro al pasar el ratón */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Página de Pago</h1>
+    </header>
+    <div class="container">
+        <div class="payment-form">
+            <h2>Detalles de Pago</h2>
+            <form id="payment-form">
+                <label for="card-number">Número de Tarjeta:</label>
+                <input type="text" id="card-number" name="card-number" placeholder="Ingrese el número de su tarjeta">
+                <label for="expiry">Fecha de Expiración:</label>
+                <input type="text" id="expiry" name="expiry" placeholder="MM/YY">
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" placeholder="Ingrese el código CVV">
+                <button type="button" id="pay-button">Pagar</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Función para generar la factura en formato PDF
+        function generateInvoice() {
+            const doc = new jsPDF();
+            doc.text("Factura de Compra", 10, 10);
+            // Agregar detalles de la compra
+            const products = [
+                { name: "Producto 1", price: 10, quantity: 2 },
+                { name: "Producto 2", price: 15, quantity: 1 }
+            ];
+            let y = 30;
+            products.forEach((product, index) => {
+                const totalPrice = product.price * product.quantity;
+                doc.text(`${product.name} x${product.quantity} - $${totalPrice.toFixed(2)}`, 10, y);
+                y += 10;
+            });
+            // Calcular el total
+            const total = products.reduce((acc, curr) => acc + curr.price * curr.quantity, 0);
+            // Agregar el total
+            doc.text(`Total: $${total.toFixed(2)}`, 10, y + 10);
+            // Guardar el documento como PDF
+            doc.save("factura.pdf");
+        }
+
+        // Evento de clic en el botón de pago
+        document.getElementById("pay-button").addEventListener("click", function() {
+            // Generar factura y descargar PDF
+            generateInvoice();
+        });
+    </script>
+</body>
+</html>
